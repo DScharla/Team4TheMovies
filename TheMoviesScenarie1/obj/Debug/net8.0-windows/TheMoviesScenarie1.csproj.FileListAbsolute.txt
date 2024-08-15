@@ -1,0 +1,5 @@
+C:\Users\bosch\Dropbox\PC\Desktop\Skole\team4\TheMoviesScenarie1\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\bosch\Dropbox\PC\Desktop\Skole\team4\TheMoviesScenarie1\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\bosch\Dropbox\PC\Desktop\Skole\team4\TheMoviesScenarie1\obj\Debug\net8.0-windows\TheMoviesScenarie1_MarkupCompile.cache
+C:\Users\bosch\Dropbox\PC\Desktop\Skole\team4\TheMoviesScenarie1\obj\Debug\net8.0-windows\TheMoviesScenarie1_MarkupCompile.lref
+C:\Users\bosch\Dropbox\PC\Desktop\Skole\team4\TheMoviesScenarie1\obj\Debug\net8.0-windows\View\MainWindow.g.cs

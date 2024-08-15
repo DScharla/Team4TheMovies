@@ -1,0 +1,15 @@
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\bin\Debug\Team4TheMovies.exe.config
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\bin\Debug\Team4TheMovies.exe
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\bin\Debug\Team4TheMovies.pdb
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\FilmView.csproj.AssemblyReference.cache
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\MainWindow.g.cs
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\App.g.cs
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies_MarkupCompile.cache
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies_MarkupCompile.lref
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\MainWindow.baml
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies.g.resources
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies.Properties.Resources.resources
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\FilmView.csproj.GenerateResource.cache
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\FilmView.csproj.CoreCompileInputs.cache
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies.exe
+C:\Users\dscha\source\repos\Team4TheMovies\Team4TheMovies\obj\Debug\Team4TheMovies.pdb

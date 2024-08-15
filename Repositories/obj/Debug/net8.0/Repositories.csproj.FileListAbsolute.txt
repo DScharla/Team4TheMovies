@@ -1,0 +1,4 @@
+C:\Users\dscha\source\repos\Team4TheMovies\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dscha\source\repos\Team4TheMovies\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\dscha\source\repos\Team4TheMovies\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
+C:\Users\dscha\source\repos\Team4TheMovies\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache

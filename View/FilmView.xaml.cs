@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using theMovies;
+using TheMoviesNy.ViewModel;
 
 namespace TheMoviesScenarie1.View
 {
@@ -21,7 +22,6 @@ namespace TheMoviesScenarie1.View
     public partial class FilmView : Window
     {
         MainViewModel mvm = new MainViewModel();
-
         public FilmView()
         {
             
@@ -30,10 +30,5 @@ namespace TheMoviesScenarie1.View
             DataContext = mvm;
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-            mvm.AddFilm(mvm.Name, mvm.Genre, mvm.Duration);
-            this.Close();
-        }
     }
 }

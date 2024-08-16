@@ -10,6 +10,6 @@
         <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="250,127,0,0" TextWrapping="Wrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Genre" HorizontalAlignment="Left" Margin="250,150,0,0" TextWrapping="Wrap" Text="{Binding Genre, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Duration" HorizontalAlignment="Left" Margin="250,173,0,0" TextWrapping="Wrap" Text="{Binding Duration, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Add" Content="Tilføj" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="120" Click="Add_Click"/>
+        <Button x:Name="Add" Content="Tilføj" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="120" Command="{Binding AddCommand}"/>
     </Grid>
 </Window>

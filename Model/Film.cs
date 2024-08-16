@@ -26,7 +26,7 @@ namespace theMovies
             set { genre = value; }
         }
 
-        public Film(string name, string genre, string duration)
+        public Film(string name, string duration, string genre)
         {
             //string durationFormat = "HH:mm";
             Duration = duration;

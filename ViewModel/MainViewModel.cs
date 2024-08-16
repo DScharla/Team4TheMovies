@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheMoviesNy.Data.Repositories;
+using TheMoviesNy.ViewModel;
 
 namespace theMovies
 {
@@ -12,7 +14,7 @@ namespace theMovies
         public FilmViewModel filmViewModel;
 
         private string name;
-
+        public RelayCommand AddCommand => new RelayCommand(execute => AddFilm(Name, Genre, Duration), canExecute => { return true; }); //canExecute er et hvilketsomhelst (valgfrit) udtryk, der returnere en bool. Hvis den returnere true, køres denne command. Hvis ikke, så køre den ikke.
         public string Name
         {
             get { return name; }
@@ -38,9 +40,9 @@ namespace theMovies
             filmRepository = new FilmRepository();
             filmViewModel = new FilmViewModel();
         }
-        public void AddFilm(string name, string genre, string duration)
+        public void AddFilm(string name, string duration, string genre)
         {
-            Film film = new Film(name, genre, duration);
+            Film film = new Film(name, duration, genre);
             filmRepository.Add(film);
             filmRepository.SaveRepository();
         }

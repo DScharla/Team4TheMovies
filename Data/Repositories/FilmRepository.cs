@@ -4,11 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using theMovies;
 
-namespace theMovies
+namespace TheMoviesNy.Data.Repositories
+{
+    public class FilmRepository : Repository
     {
-        public class FilmRepository : Repository
-        {
         public override string RepoName { get; set; } = "FilmRepository";
         public override void LoadRepository()
         {
@@ -23,7 +24,7 @@ namespace theMovies
                 }
             }
         }
-        private Film CreateFilmFromString(string title, string genre, string duration)
+        private Film CreateFilmFromString(string title, string duration, string genre)
         {
             string dateFormat = "yyyy-MM-dd HH:mm";
             string durationFormat = "HH:mm";
@@ -69,16 +70,16 @@ namespace theMovies
 
         }*/
         public override void Add(object o1)
-            {
-                repoList.Add(o1);
-            }
-            public override object Get(object o)
-            {
-                throw new NotImplementedException();
-            }
-            public FilmRepository()
-            {
-                LoadRepository();
-            }
+        {
+            repoList.Add(o1);
+        }
+        public override object Get(object o)
+        {
+            throw new NotImplementedException();
+        }
+        public FilmRepository()
+        {
+            LoadRepository();
         }
     }
+}

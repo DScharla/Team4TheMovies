@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using TheMoviesNy;
 
 namespace theMovies
 {
-    public abstract class Repository
+    public abstract class Repository : ISubject
     {
         public string repoDest = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
         public string FullPath { get { return Path.Combine(repoDest, RepoName); } }
         public abstract string RepoName { get; set; }
 
-        public ObservableCollection<object> repoList = new ObservableCollection<object>();
+        private ObservableCollection<object> repoList = new ObservableCollection<object>();
+        public ObservableCollection<object> RepoList {
+            get {return repoList; }
+            set {repoList = value;} 
+        }
 
         public void CreateRepository()
         {
@@ -43,5 +48,13 @@ namespace theMovies
             repoList.Remove(o1);
         }
         public abstract object Get(object o);
+
+        public override void Notify()
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.Update(RepoList);
+            }
+        }
     }
 }

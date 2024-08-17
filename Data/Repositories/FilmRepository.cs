@@ -20,7 +20,7 @@ namespace TheMoviesNy.Data.Repositories
                 {
                     string[] parts = line.Split(';');
                     Film film = CreateFilmFromString(parts[0], parts[1], parts[2]);
-                    repoList.Add(film);
+                    RepoList.Add(film);
                 }
             }
         }
@@ -71,7 +71,8 @@ namespace TheMoviesNy.Data.Repositories
         }*/
         public override void Add(object o1)
         {
-            repoList.Add(o1);
+            RepoList.Add(o1);
+            SaveRepository();
         }
         public override object Get(object o)
         {

@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="FilmView" Height="450" Width="800">
     <Grid>
+        <!--
+        <ListView x:Name="lstvwPassengerList" Margin="20,20,700,50" ItemsSource="{Binding List, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Current}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="lstvwPassengerListName" Header="Navn" Width="120" DisplayMemberBinding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwPassengerListAddress" Header="Adresse" Width="120" DisplayMemberBinding="{Binding Address, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwPassengerListPhoneNumber" Header="Telefon" Width="120" DisplayMemberBinding="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwPassengerListComment" Header="Kommentar" Width="120" DisplayMemberBinding="{Binding Comment, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwPassengerListInstitution" Header="Institution" Width="120" DisplayMemberBinding="{Binding Institution, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwPassengerListEstimatedTimeOfTrip" Header="Tidsforbrug" Width="75" DisplayMemberBinding="{Binding EstimatedTimeOfTrip, UpdateSourceTrigger=PropertyChanged}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        -->
         <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="250,127,0,0" TextWrapping="Wrap" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Genre" HorizontalAlignment="Left" Margin="250,150,0,0" TextWrapping="Wrap" Text="{Binding Genre, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="Duration" HorizontalAlignment="Left" Margin="250,173,0,0" TextWrapping="Wrap" Text="{Binding Duration, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>

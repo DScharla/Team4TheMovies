@@ -1,0 +1,118 @@
+@startuml
+
+package Data {
+    package Repositories {
+        class FilmRepository extends Repository {
+            +FilmRepository()
+            +string RepoName { get; set; } = "FilmRepository" <<override>>
+            +void LoadRepository() <<override>>
+            +void Add(object o1) <<override>>
+            +object Get(object o) <<override>>
+            -Film CreateFilmFromString(string title, string duration, string genre)
+        }
+        
+        abstract class Repository implements ISubject {
+            -string repoDest
+            +string FullPath { get; }
+            +string RepoName { get; set; } <<abstract>>
+            -ObservableCollection<object> repoList
+            +ObservableCollection<object> RepoList { get; set; }
+
+            +void CreateRepository()
+            +void SaveRepository()
+            +void Remove(object o1)
+            +void Notify() <<override>>
+            +void LoadRepository() <<abstract>>
+            +void Add(object o1) <<abstract>>
+            +object Get(object o) <<abstract>>
+        }
+    }
+    interface ISubject {
+    -List<IObserver> observers = new List<IObserver>()
+    +void Attach(IObserver o)
+    +void Detach(IObserver o)
+    +void Notify() <<abstract>>
+}
+}
+
+package Model {
+    class Film {
+        -string name
+        -string duration
+        -string genre
+        
+        +Film(string name, string duration, string genre)
+        +string Name
+        +string Duration
+        +string Genre
+        +string ToString()
+    }
+}
+
+package View {
+    class FilmView {
+        // Properties and methods for XAML file
+    }
+    
+    class MainWindow {
+        // Properties and methods for MainWindow.xaml
+    }
+}
+
+package ViewModel {
+    interface IObserver {
+      +void Update(ObservableCollection<object> repoList)
+    }
+    class FilmViewModel {
+    }
+    
+    class MainViewModel implements IObserver {
+        -ObservableCollection<object> filmList
+        +ObservableCollection<object> FilmList { get; }
+
+        -FilmRepository filmRepository
+        +FilmRepository FilmRepository { get; set; }
+
+        +RelayCommand AddCommand
+        -string name
+        +string Name { get; set; }
+
+        -string genre
+        +string Genre { get; set; }
+
+        -string duration
+        +string Duration { get; set; }
+
+        +MainViewModel()
+        -void AddFilm(string name, string duration, string genre)
+        +void Update(ObservableCollection<object> repoList)
+    }
+    
+    class RelayCommand implements ICommand {
+        -Action<object> execute
+        -Func<object, bool> canExecute
+
+        +event EventHandler? CanExecuteChanged
+        +bool CanExecute(object? parameter)
+        +void Execute(object? parameter)
+        +RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
+    }
+    
+    class ViewModelBase implements INotifyPropertyChanged {
+        +event PropertyChangedEventHandler? PropertyChanged
+        #void OnPropertyChanged(string propertyName = null)
+    }
+}
+
+
+
+
+
+FilmRepository --> Film : uses
+Repository --> IObserver : observers
+MainViewModel --> FilmRepository : uses
+MainViewModel --> Film : creates
+MainViewModel --> RelayCommand : uses
+FilmView --> MainViewModel : creates
+MainWindow --> MainViewModel : creates
+@enduml

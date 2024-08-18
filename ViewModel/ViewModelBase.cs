@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace TheMoviesNy.ViewModel
 {
+    //Tror disse er unødvendige når der er implementeret observer pattern
     public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;

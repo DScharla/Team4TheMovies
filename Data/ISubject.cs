@@ -5,8 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
+using TheMoviesNy.ViewModel;
 
-namespace TheMoviesNy
+namespace TheMoviesNy.Data
 {
     public abstract class ISubject
     {

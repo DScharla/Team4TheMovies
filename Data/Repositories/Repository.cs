@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.IO;
-using TheMoviesNy;
+using TheMoviesNy.Data;
+using TheMoviesNy.ViewModel;
 
 namespace theMovies
 {

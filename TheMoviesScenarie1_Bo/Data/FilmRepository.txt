@@ -1,0 +1,32 @@
+Inception;Sci-Fi;02:28
+The Dark Knight;Action;02:32
+Forrest Gump;Drama;02:22
+The Matrix;Sci-Fi;02:16
+Titanic;Romance;03:14
+Toy Story;Animation;01:21
+Jurassic Park;Adventure;02:07
+The Godfather;Crime;02:55
+Pulp Fiction;Thriller;02:34
+The Lion King;Animation;01:29
+Avengers: Endgame;Action;03:01
+Shawshank Redemption;Drama;02:22
+Star Wars: A New Hope;Sci-Fi;02:01
+The Silence of the Lambs;Thriller;01:58
+Back to the Future;Adventure;01:56
+Gladiator;Action;02:35
+The Social Network;Drama;02:00
+Finding Nemo;Animation;01:40
+The Incredibles;Animation;01:55
+Die Hard;Action;02:11
+Casablanca;Romance;01:42
+The Terminator;Sci-Fi;01:47
+Alien;Horror;01:57
+Goodfellas;Crime;02:25
+Schindler's List;Drama;03:15
+The Departed;Thriller;02:31
+Memento;Mystery;01:53
+Blade Runner 2049;Sci-Fi;02:44
+Whiplash;Drama;01:46
+The Grand Budapest Hotel;Comedy;01:39
+Die Hard 4;Christmas Special;02:31
+Deadpool;Comedy, Action;02:13

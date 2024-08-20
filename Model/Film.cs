@@ -43,7 +43,7 @@ namespace theMovies
 
         public Film(string name, string duration, string genre, string director, string premierDate)
         {
-            Duration = TimeOnlyFromString(duration);
+            Duration = TimeOnlyFromString(duration).AddMinutes(30);
             Name = name;
             Genre = genre;
             Director = director;

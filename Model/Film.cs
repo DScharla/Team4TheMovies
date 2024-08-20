@@ -11,9 +11,9 @@ namespace theMovies
             get { return name; }
             set { name = value; }
         }
-        private string duration;
+        private TimeOnly duration;
 
-        public string Duration
+        public TimeOnly Duration
         {
             get { return duration; }
             set { duration = value; }
@@ -25,21 +25,44 @@ namespace theMovies
             get { return genre; }
             set { genre = value; }
         }
+        private string director;
 
-        public Film(string name, string duration, string genre)
+        public string Director
         {
-            //string durationFormat = "HH:mm";
-            Duration = duration;
-            //Duration = TimeOnly.ParseExact(duration, durationFormat, null);     
+            get { return director; }
+            set { director = value; }
+        }
+
+        private DateOnly premierDate;
+
+        public DateOnly PremierDate
+        {
+            get { return premierDate; }
+            set { premierDate = value; }
+        }
+
+        public Film(string name, string duration, string genre, string director, string premierDate)
+        {
+            Duration = TimeOnlyFromString(duration);
             Name = name;
             Genre = genre;
+            Director = director;
+            PremierDate = DateOnlyFromString(premierDate);
 
         }
         public override string ToString()
         {
             string s;
-            s = name + ";" + duration + ";" + genre;
+            s = name + ";" + duration.ToString() + ";" + genre + ";" + director + ";" + PremierDate.ToString();
             return s;
+        }
+        public TimeOnly TimeOnlyFromString(string duration)
+        {
+            return TimeOnly.Parse(duration);
+        }
+        public DateOnly DateOnlyFromString(string date)
+        {
+            return DateOnly.Parse(date);
         }
     }
 }

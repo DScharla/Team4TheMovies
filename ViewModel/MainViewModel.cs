@@ -23,7 +23,7 @@ namespace theMovies
             set { filmRepository = value; }
         }
 
-        public RelayCommand AddCommand => new RelayCommand(execute => AddFilm(Name, Genre, Duration), canExecute => { return true; }); //canExecute er et hvilketsomhelst (valgfrit) udtryk, der returnere en bool. Hvis den returnere true, køres denne command. Hvis ikke, så køre den ikke.
+        public RelayCommand AddCommand => new RelayCommand(execute => AddFilm(Name, Genre, Duration, Director, PremierDate), canExecute => { return true; }); //canExecute er et hvilketsomhelst (valgfrit) udtryk, der returnere en bool. Hvis den returnere true, køres denne command. Hvis ikke, så køre den ikke.
 
         private string name;
         
@@ -46,6 +46,20 @@ namespace theMovies
             get { return duration; }
             set { duration = value; }
         }
+        private string director;
+
+        public string Director
+        {
+            get { return director; }
+            set { director = value; }
+        }
+        private string premierDate;
+
+        public string PremierDate
+        {
+            get { return premierDate; }
+            set { premierDate = value; }
+        }
 
         public MainViewModel() 
         {
@@ -54,9 +68,9 @@ namespace theMovies
 
             filmList = filmRepository.RepoList;
         }
-        private void AddFilm(string name, string duration, string genre)
+        private void AddFilm(string name, string duration, string genre, string director, string premierDate)
         {
-            Film film = new Film(name, duration, genre);
+            Film film = new Film(name, duration, genre, director, premierDate);
             filmRepository.Add(film);
         }
 

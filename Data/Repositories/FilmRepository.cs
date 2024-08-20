@@ -19,12 +19,12 @@ namespace TheMoviesNy.Data.Repositories
                 while ((line = streamReader.ReadLine()) != null)
                 {
                     string[] parts = line.Split(';');
-                    Film film = CreateFilmFromString(parts[0], parts[1], parts[2]);
+                    Film film = new Film(parts[0], parts[1], parts[2], parts[3], parts[4]);
                     RepoList.Add(film);
                 }
             }
         }
-        private Film CreateFilmFromString(string title, string duration, string genre)
+/*        private Film CreateFilmFromString(string title, string duration, string genre)
         {
             string dateFormat = "yyyy-MM-dd HH:mm";
             string durationFormat = "HH:mm";
@@ -32,7 +32,7 @@ namespace TheMoviesNy.Data.Repositories
             Film film = new Film(title, duration, genre);
 
             return film;
-        }
+        }*/
 
         //public override void LoadRepository()
         //{
@@ -80,7 +80,14 @@ namespace TheMoviesNy.Data.Repositories
         }
         public FilmRepository()
         {
-            LoadRepository();
+            try
+            {
+                LoadRepository();
+            }
+            catch { CreateRepository(); }
+            
+            
+            //LoadRepository();
         }
     }
 }

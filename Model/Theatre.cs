@@ -24,5 +24,18 @@ namespace TheMoviesNy.Model
             this.name = name;
             this.rooms = rooms;
         }
+        public Theatre(string name, string[] rooms, string[] showings)
+        {
+            this.name = name;
+            this.rooms = rooms;
+            foreach (string showing in showings)
+            {
+
+            }
+        }
+        public Showing ShowingFromString()
+        {
+
+        }
     }
 }

@@ -69,25 +69,9 @@ namespace TheMoviesNy.Data.Repositories
             DateTime dtPremierDate = DateTime.ParseExact(premierDate, dateFormat, null);
 
         }*/
-        public override void Add(object o1)
-        {
-            RepoList.Add(o1);
-            SaveRepository();
-        }
         public override object Get(object o)
         {
             throw new NotImplementedException();
-        }
-        public FilmRepository()
-        {
-            try
-            {
-                LoadRepository();
-            }
-            catch { CreateRepository(); }
-            
-            
-            //LoadRepository();
         }
     }
 }

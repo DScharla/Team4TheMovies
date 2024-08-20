@@ -11,9 +11,9 @@ namespace theMovies
             get { return name; }
             set { name = value; }
         }
-        private TimeOnly duration;
+        private TimeSpan duration;
 
-        public TimeOnly Duration
+        public TimeSpan Duration
         {
             get { return duration; }
             set { duration = value; }
@@ -43,7 +43,7 @@ namespace theMovies
 
         public Film(string name, string duration, string genre, string director, string premierDate)
         {
-            Duration = TimeOnlyFromString(duration).AddMinutes(30);
+            Duration = TimeSpanFromString(duration);
             Name = name;
             Genre = genre;
             Director = director;
@@ -56,9 +56,9 @@ namespace theMovies
             s = name + ";" + duration.ToString() + ";" + genre + ";" + director + ";" + PremierDate.ToString();
             return s;
         }
-        public TimeOnly TimeOnlyFromString(string duration)
+        public TimeSpan TimeSpanFromString(string duration)
         {
-            return TimeOnly.Parse(duration);
+            return TimeSpan.Parse(duration);
         }
         public DateOnly DateOnlyFromString(string date)
         {

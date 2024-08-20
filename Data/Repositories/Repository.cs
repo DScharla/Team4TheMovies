@@ -17,7 +17,16 @@ namespace theMovies
             get {return repoList; }
             set {repoList = value;} 
         }
-
+        public Repository()
+        {
+            {
+                try
+                {
+                    LoadRepository();
+                }
+                catch { CreateRepository(); }
+            }
+        }
         public void CreateRepository()
         {
             StreamWriter sw = new StreamWriter(FullPath);
@@ -42,7 +51,11 @@ namespace theMovies
             }
         }
         public abstract void LoadRepository();
-        public abstract void Add(object o1);
+        public  void Add(object o1)
+        {
+            RepoList.Add(o1);
+            SaveRepository();
+        }
 
         public void Remove(object o1)
         {

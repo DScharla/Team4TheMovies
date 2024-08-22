@@ -1,0 +1,17 @@
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.exe
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.deps.json
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.runtimeconfig.json
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.pdb
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\Microsoft.Windows.SDK.NET.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net8.0-windows10.0.26100.0\WinRT.Runtime.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.AssemblyInfoInputs.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.AssemblyInfo.cs
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.csproj.CoreCompileInputs.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.1BD5158D.Up2Date
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\refint\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.pdb
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\BonusApp.Code.genruntimeconfig.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net8.0-windows10.0.26100.0\ref\BonusApp.Code.dll

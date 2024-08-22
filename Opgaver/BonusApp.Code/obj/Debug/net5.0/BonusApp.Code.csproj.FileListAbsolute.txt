@@ -1,0 +1,16 @@
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.exe
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.deps.json
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.runtimeconfig.json
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.runtimeconfig.dev.json
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\bin\Debug\net5.0\BonusApp.Code.pdb
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.csproj.AssemblyReference.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.AssemblyInfoInputs.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.AssemblyInfo.cs
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.csproj.CoreCompileInputs.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\refint\BonusApp.Code.dll
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.pdb
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\BonusApp.Code.genruntimeconfig.cache
+C:\Users\dscha\OneDrive\Skrivebord\BonusApp.Code\obj\Debug\net5.0\ref\BonusApp.Code.dll

@@ -21,13 +21,13 @@ namespace TheMoviesScenarie1.View
     /// </summary>
     public partial class FilmView : Window
     {
-        FilmViewModel fvm = new FilmViewModel();
+        MainViewModel mvm = new MainViewModel();
         public FilmView()
         {
             
             InitializeComponent();
 
-            DataContext = fvm;
+            DataContext = mvm.Fvm;
         }
 
     }

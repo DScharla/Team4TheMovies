@@ -10,8 +10,10 @@ using TheMoviesNy.Model;
 
 namespace TheMoviesNy.ViewModel
 {
-    internal class TheatreViewModel : IObserver
+    public class TheatreViewModel : IObserver
     {
+        private FilmRepository filmRepository;
+
         private ObservableCollection<object> theatreList;
         public ObservableCollection<object> TheatreList { get { return theatreList; } }
 
@@ -22,7 +24,31 @@ namespace TheMoviesNy.ViewModel
             set { theatreRepository = value; }
         }
 
-        public RelayCommand AddCommand => new RelayCommand(execute => AddTheatre(Name, City), canExecute => { return true; }); //canExecute er et hvilketsomhelst (valgfrit) udtryk, der returnere en bool. Hvis den returnere true, køres denne command. Hvis ikke, så køre den ikke.
+        public RelayCommand AddCommand => new RelayCommand(execute => AddTheatreWithShowing(Name, City, FilmName, Date, Time, "Room" /*placeholder*/, Mail, Phone), canExecute => { return true; }); //canExecute er et hvilketsomhelst (valgfrit) udtryk, der returnere en bool. Hvis den returnere true, køres denne command. Hvis ikke, så køre den ikke.
+
+        private string date;
+
+        public string Date
+        {
+            get { return date; }
+            set { date = value; }
+        }
+
+        private string time;
+
+        public string Time
+        {
+            get { return time; }
+            set { time = value; }
+        }
+
+        private string showingTime;
+
+        public string ShowingTime
+        {
+            get { return showingTime; }
+            set { showingTime = value; }
+        }
 
         private string name;
 
@@ -53,16 +79,30 @@ namespace TheMoviesNy.ViewModel
             set { mail = value; }
         }
 
-        public TheatreViewModel()
+        private string filmName;
+
+        public string FilmName
+        {
+            get { return filmName; }
+            set { filmName = value; }
+        }
+
+
+        public TheatreViewModel(FilmRepository filmrepository)
         {
             theatreRepository = new TheatreRepository();
             theatreRepository.Attach(this);
+            this.filmRepository = filmrepository;
+            filmRepository.Attach(this);
 
             theatreList = theatreRepository.RepoList;
         }
-        private void AddTheatre(string name, string city)
+        private void AddTheatreWithShowing(string name, string city, string filmName, string date, string time, string room, string mail, string phone)
         {
-            Theatre theatre = new Theatre(name, city);
+            //string date, string timeStart, string? room, string mail, string phone
+            Film film = filmRepository.GetByName(filmName);
+            Showing showing = new Showing(film, date, time, room, mail, phone);
+            Theatre theatre = new Theatre(name, city, showing);
             theatreRepository.Add(theatre);
         }
 

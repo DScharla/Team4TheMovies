@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,6 +21,7 @@ namespace TheMoviesNy.Model
         private TimeSpan duration;
         private string mail;
         private string phone;
+        private int numberOfTickets = 50;
 
         public Showing(Film film, DateOnly date, TimeOnly timeStart, string? room, string mail, string phone) 
         {
@@ -69,6 +71,15 @@ namespace TheMoviesNy.Model
         {
             string dateTimeFormat = "yyyy/mm/dd";
             return DateTime.ParseExact(dateTime, dateTimeFormat, null);
+        }
+        public void BuyTicket(int numberOfTickets)
+        {
+            if (this.numberOfTickets >= 0) {
+                this.numberOfTickets = this.numberOfTickets - numberOfTickets;
+            }
+            else {
+                this.numberOfTickets = 0;
+            }
         }
     }
 }

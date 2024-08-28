@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using theMovies;
 
 namespace TheMoviesNy.Data.Repositories
@@ -27,6 +29,23 @@ namespace TheMoviesNy.Data.Repositories
         public override object Get(object o)
         {
             throw new NotImplementedException();
+        }
+        public Film GetByName(string name)
+        {
+            Film[] films = new Film[RepoList.Count];
+            RepoList.CopyTo(films, 0);
+            int filmmatch=0;
+            int i = 0;
+            foreach (Film film in films)
+            {
+                if (film.Name == name)
+                {
+                    filmmatch = i;
+                    i++;
+                }
+                i++;
+            }
+            return (Film)RepoList[filmmatch];
         }
     }
 }

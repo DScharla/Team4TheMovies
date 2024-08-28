@@ -25,30 +25,52 @@
         <ListView x:Name="lstvwPassengerList" Margin="20,20,700,50" ItemsSource="{Binding List, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding Current}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="lstvwPassengerListName" Header="Navn" Width="120" DisplayMemberBinding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
-                    <GridViewColumn x:Name="lstvwPassengerListAddress" Header="Adresse" Width="120" DisplayMemberBinding="{Binding Address, UpdateSourceTrigger=PropertyChanged}"/>
-                    <GridViewColumn x:Name="lstvwPassengerListPhoneNumber" Header="Telefon" Width="120" DisplayMemberBinding="{Binding PhoneNumber, UpdateSourceTrigger=PropertyChanged}"/>
-                    <GridViewColumn x:Name="lstvwPassengerListComment" Header="Kommentar" Width="120" DisplayMemberBinding="{Binding Comment, UpdateSourceTrigger=PropertyChanged}"/>
-                    <GridViewColumn x:Name="lstvwPassengerListInstitution" Header="Institution" Width="120" DisplayMemberBinding="{Binding Institution, UpdateSourceTrigger=PropertyChanged}"/>
-                    <GridViewColumn x:Name="lstvwPassengerListEstimatedTimeOfTrip" Header="Tidsforbrug" Width="75" DisplayMemberBinding="{Binding EstimatedTimeOfTrip, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwTheatreListName" Header="Navn" Width="120" DisplayMemberBinding="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwTheatreListCity" Header="By" Width="120" DisplayMemberBinding="{Binding City, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwTheatreListPhoneNumber" Header="Telefon" Width="120" DisplayMemberBinding="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                    <GridViewColumn x:Name="lstvwTheatreListMail" Header="Mail" Width="120" DisplayMemberBinding="{Binding Mail, UpdateSourceTrigger=PropertyChanged}"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label x:Name="lblTheatreName" Content="Navn:" HorizontalAlignment="Left" Margin="709,85,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
         <Label x:Name="lblTheatreCity" Content="By:" HorizontalAlignment="Left" Margin="709,115,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
         <Label x:Name="lblTheatrePhoneNumber" Content="Telefonnummer:" HorizontalAlignment="Left" Margin="709,145,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <Label x:Name="lblTheatreMail" Content="Mail:" HorizontalAlignment="Left" Margin="709,175,0,0" VerticalAlignment="Top" FontWeight="Bold" Grid.Column="1"/>
-        <TextBox x:Name="txtbxNavn" Text="{Binding Current.Name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="859,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
-        <TextBox x:Name="txtbxNavnEdit" Text="{Binding Current.Name, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="txtbxCity" Text="{Binding Current.Address}" HorizontalAlignment="Left" Margin="859,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
-        <TextBox x:Name="txtbxCityEdit" Text="{Binding Current.Address, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="txtbxPhoneNumber" Text="{Binding Current.PhoneNumber}" HorizontalAlignment="Left" Margin="859,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
-        <TextBox x:Name="txtbxPhoneNumberEdit" Text="{Binding Current.PhoneNumber, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <TextBox x:Name="txtbxComment" Text="{Binding Current.Comment}" HorizontalAlignment="Left" Margin="859,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
-        <TextBox x:Name="txtbxCommentEdit" Text="{Binding Current.Comment, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
-        <Button x:Name="btnAddTheatre" Command="{Binding AddCommand}" Content="Opret biograf" HorizontalAlignment="Left" Margin="773,241,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnEditTheatre" Command="{Binding SaveEditCommand}" Content="Gem ændringer" HorizontalAlignment="Left" Margin="984,241,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnDeleteTheatre" Command="{Binding DeleteCommand}" Content="Slet barn" HorizontalAlignment="Left" Margin="891,241,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnCancelTheatre" Content="Annuller" HorizontalAlignment="Left" Margin="1126,241,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTheatreMail" Content="Mail:" HorizontalAlignment="Left" Margin="709,168,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtbxNavn" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="859,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
+        <TextBox x:Name="txtbxNavnEdit" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxCity" Text="{Binding City}" HorizontalAlignment="Left" Margin="859,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
+        <TextBox x:Name="txtbxCityEdit" Text="{Binding City, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxPhoneNumber" Text="{Binding Phone}" HorizontalAlignment="Left" Margin="859,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" Grid.Column="1"/>
+        <TextBox x:Name="txtbxPhoneNumberEdit" Text="{Binding Phone, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxMail" Text="{Binding Mail}" HorizontalAlignment="Left" Margin="859,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxMailEdit" Text="{Binding Mail, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="btnAddTheatre" Command="{Binding AddCommand}" Content="Opret biograf" HorizontalAlignment="Left" Margin="775,330,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnEditTheatre" Command="{Binding SaveEditCommand}" Content="Gem ændringer" HorizontalAlignment="Left" Margin="986,330,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnDeleteTheatre" Command="{Binding DeleteCommand}" Content="Slet barn" HorizontalAlignment="Left" Margin="893,330,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnCancelTheatre" Content="Annuller" HorizontalAlignment="Left" Margin="1128,330,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblTheatreMail_Copy" Content="Dato:" HorizontalAlignment="Left" Margin="709,200,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtbxDate" Text="{Binding Date}" HorizontalAlignment="Left" Margin="859,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxDateEdit" Text="{Binding Date, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <Label x:Name="lblTheatreTime" Content="Tid:" HorizontalAlignment="Left" Margin="709,240,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtbxTime" Text="{Binding Time}" HorizontalAlignment="Left" Margin="859,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxTimeEdit" Text="{Binding Time, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,245,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <DockPanel LastChildFill="False" Margin="0,76,0,-76">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Bruger">
+                    <MenuItem Header="_Chaffør"/>
+                    <MenuItem Header="_Planlægger"/>
+                    <MenuItem Header="_Boss"/>
+                </MenuItem>
+                <MenuItem Header="_Vis">
+                    <MenuItem Header="_Menu"/>
+                    <MenuItem Header="_Køreplaner"/>
+                    <MenuItem Header="_Børn"/>
+                    <MenuItem Header="_Institutioner"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label x:Name="lblTheatreFilmName" Content="Film:" HorizontalAlignment="Left" Margin="709,280,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox x:Name="txtbxTheatreFilmName" Text="{Binding FilmName}" HorizontalAlignment="Left" Margin="859,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
+        <TextBox x:Name="txtbxTheatreFilmNameEdit" Text="{Binding FilmName, Mode=OneWay}" IsEnabled="False" HorizontalAlignment="Left" Margin="1114,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250"/>
     </Grid>
 </Window>

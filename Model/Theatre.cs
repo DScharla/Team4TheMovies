@@ -21,12 +21,12 @@ namespace TheMoviesNy.Model
             this.name = name;
             this.city = city;
         }
-        /*public Theatre(string name, string city,)
+        public Theatre(string name, string city, Showing showing)
         {
             this.name = name;
-            this.rooms = rooms;
+            showings.Add(showing);
             this.city=city;
-        }*/
+        }
         public Theatre(string name, string city, string[] showings)
         {
             this.name = name;
@@ -38,7 +38,11 @@ namespace TheMoviesNy.Model
         }
         public override string ToString()
         {
-            return name + ";" + city + ";" + showings[0].ToString();
+            if (showings.Count != 0)
+            {
+                return name + ";" + city + ";" + showings[0].ToString();
+            }
+            else { return name + ";" + city + ";"; }
         }
 
         public string[] showingsToString(ObservableCollection<Showing> showings)

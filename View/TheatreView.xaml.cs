@@ -19,15 +19,15 @@ namespace TheMoviesScenarie1.View
     /// <summary>
     /// Interaction logic for FilmView.xaml
     /// </summary>
-    public partial class FilmView : Window
+    public partial class TheatreView : Window
     {
-        FilmViewModel fvm = new FilmViewModel();
-        public FilmView()
+        TheatreViewModel tvm = new TheatreViewModel();
+        public TheatreView()
         {
-            
+
             InitializeComponent();
 
-            DataContext = fvm;
+            DataContext = tvm;
         }
 
     }

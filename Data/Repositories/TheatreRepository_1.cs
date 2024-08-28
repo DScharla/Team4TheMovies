@@ -8,7 +8,7 @@ using theMovies;
 
 namespace TheMoviesNy.Data.Repositories
 {
-    public class FilmRepository : Repository
+    public class TheatreRepository : Repository
     {
         public override string RepoName { get; set; } = "FilmRepository";
         public override void LoadRepository()

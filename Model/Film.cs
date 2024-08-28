@@ -53,7 +53,7 @@ namespace theMovies
         public override string ToString()
         {
             string s;
-            s = name + ";" + duration.ToString() + ";" + genre + ";" + director + ";" + PremierDate.ToString();
+            s = name + ";" + genre + ";" + duration.ToString() + ";"+ director + ";" + PremierDate.ToString();
             return s;
         }
         public TimeSpan TimeSpanFromString(string duration)

@@ -17,8 +17,8 @@ namespace theMovies
         private ObservableCollection<object> filmList;
         public ObservableCollection<object> FilmList { get { return filmList; }}
 
-        private FilmRepository filmRepository;
-        public FilmRepository FilmRepository {  
+        private TheatreRepository filmRepository;
+        public TheatreRepository FilmRepository {  
             get { return filmRepository; }
             set { filmRepository = value; }
         }
@@ -63,7 +63,7 @@ namespace theMovies
 
         public MainViewModel() 
         {
-            filmRepository = new FilmRepository();
+            filmRepository = new TheatreRepository();
             filmRepository.Attach(this);
 
             filmList = filmRepository.RepoList;

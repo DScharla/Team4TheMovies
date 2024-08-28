@@ -30,10 +30,16 @@ namespace Team4TheMovies
             DataContext = mvm;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Film_Click(object sender, RoutedEventArgs e)
         {
             FilmView filmView = new FilmView();
             filmView.Show();
+        }
+
+        private void Theatre_Click(object sender, RoutedEventArgs e)
+        {
+            TheatreView theatreView = new TheatreView();
+            theatreView.Show();
         }
     }
 }
